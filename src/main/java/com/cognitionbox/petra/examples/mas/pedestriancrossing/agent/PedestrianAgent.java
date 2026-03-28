@@ -56,7 +56,7 @@ public class PedestrianAgent {
 
     public void signal() {
         if (isDecided()) {
-            CustomLogger.log("PedestrianAgent: " + colour);
+            CustomLogger.log("PedestrianAgent: signal changed to " + colour);
             status = State.SIGNALLED;
             assert(isSignalled());
         }

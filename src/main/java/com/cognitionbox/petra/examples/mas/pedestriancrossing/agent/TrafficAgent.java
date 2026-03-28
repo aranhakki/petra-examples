@@ -56,7 +56,7 @@ public class TrafficAgent {
 
     public void signal() {
         if (isDecided()) {
-            CustomLogger.log("TrafficAgent: " + colour);
+            CustomLogger.log("TrafficAgent: signal changed to " + colour);
             status = State.SIGNALLED;
             assert(isSignalled());
         }

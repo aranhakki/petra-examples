@@ -22,7 +22,7 @@ public class LLM {
     private String askGemini(String prompt) throws IOException, InterruptedException {
         CustomLogger.log("LLM: prompt: "+prompt);
         String result = callGemini("user",prompt);
-        CustomLogger.log("LLM: responded with the following: "+result);
+        CustomLogger.log("LLM: response: "+result);
         return result;
     }
 
@@ -47,7 +47,7 @@ public class LLM {
         conversationHistory.add(msg);
     }
 
-    private static final String API_KEY = ""; // Gemini API key goes here
+    private static final String API_KEY = "AIzaSyA-mpm2soKGeNUV40Jm_zNxuwbIEx9N7JM"; // Gemini API key goes here
     // OpenAI-compatible endpoint for Gemini
     private static final String GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
 
