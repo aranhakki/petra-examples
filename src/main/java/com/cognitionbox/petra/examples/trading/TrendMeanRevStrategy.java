@@ -94,6 +94,5 @@ public final class TrendMeanRevStrategy implements Runnable {
             ;
             assert(holdSoldMeanRev());
         }
-
     }
 }
