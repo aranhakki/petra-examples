@@ -54,18 +54,6 @@ Once installed, your project will recognize the following dependency, add it in 
 Run the syntax checker by executing the ```PetraVerification``` JUnit tests by right-clicking on the tests and running within the IDE, or by using the following maven command
 ```mvn clean test```.
 
-### 5. Pedestrian Crossing Example (Local Testing Only)
-To run the pedestrian crossing example we require ```jackson-databind``` maven dependency:
-```
-<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-    <version>2.21.1</version>
-</dependency>
-```
-
-The verification server will reject changes to ```pom.xml``` therefore do not push these changes.
-
 ---
 
 ## 📝 Rules of Engagement
