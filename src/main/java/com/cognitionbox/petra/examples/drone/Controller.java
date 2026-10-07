@@ -1,4 +1,4 @@
-package com.cognitionbox.petra.examples.droneroutesystem;
+package com.cognitionbox.petra.examples.drone;
 
 /*
  * Work towards a new model for drone, which was developed by thinking in terms of Hierachical State Machines (HSM). This seem to be a close fit to Petra whilst being wildy used and being a simple visual tool to prototype the model.

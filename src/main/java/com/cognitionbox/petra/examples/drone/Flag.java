@@ -1,10 +1,7 @@
-package com.cognitionbox.petra.examples.droneroutesystem;
+package com.cognitionbox.petra.examples.drone;
 
 import com.cognitionbox.petra.ast.terms.Base;
-import com.cognitionbox.petra.ast.terms.External;
 import com.cognitionbox.petra.ast.terms.Initial;
-
-import java.util.concurrent.atomic.AtomicBoolean;
 
 @Base
 public class Flag {

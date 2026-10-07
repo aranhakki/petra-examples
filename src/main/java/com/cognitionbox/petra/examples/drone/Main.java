@@ -1,4 +1,4 @@
-package com.cognitionbox.petra.examples.droneroutesystem;
+package com.cognitionbox.petra.examples.drone;
 
 import static com.cognitionbox.petra.ast.interp.util.Program.startReactive;
 
