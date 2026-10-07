@@ -8,7 +8,12 @@ grant codeBase "file:${maven.repo.local}/junit/-" {
     permission java.security.AllPermission;
 };
 
-// 3. THE STRICT SANDBOX (Applies to all PR code and normal dependencies)
+// 3. Whitelist Petra Verifier (The Trusted IP Framework)
+grant codeBase "file:${maven.repo.local}/com/cognitionbox/petra/-" {
+    permission java.security.AllPermission;
+};
+
+// 4. THE STRICT SANDBOX (Applies to all untrusted PR code)
 grant {
     permission java.util.PropertyPermission "*", "read,write";
     permission java.io.FilePermission "${java.home}/-", "read";
