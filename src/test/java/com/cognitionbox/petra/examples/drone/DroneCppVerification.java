@@ -8,8 +8,8 @@ import org.junit.runners.Parameterized;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class DroneVerificationCpp extends PetraVerification {
-    public DroneVerificationCpp(PetraTask task) {
+public class DroneCppVerification extends PetraVerification {
+    public DroneCppVerification(PetraTask task) {
         super(task);
     }
 

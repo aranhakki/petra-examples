@@ -9,8 +9,8 @@ import java.util.Collection;
 
 //@RunWith(PetraVerificationRunner.class)
 @RunWith(Parameterized.class)
-public class LightVerificationCpp extends PetraVerification {
-    public LightVerificationCpp(PetraTask task) {
+public class LightCppVerification extends PetraVerification {
+    public LightCppVerification(PetraTask task) {
         super(task);
     }
 
