@@ -29,6 +29,7 @@
                      -Djava.security.manager
                      -Djava.security.policy=${project.basedir}/.github/sandbox.policy
                  </argLine>
+                  <useManifestOnlyJar>false</useManifestOnlyJar>
              </configuration>
          </plugin>
     </plugins>
