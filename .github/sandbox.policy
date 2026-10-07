@@ -1,4 +1,5 @@
 grant codeBase "file:${user.dir}/-" {
     permission java.util.PropertyPermission "*", "read";
     permission java.io.FilePermission "${user.dir}/-", "read";
+    permission java.io.FilePermission "${maven.repo.local}/-", "read";
 };
