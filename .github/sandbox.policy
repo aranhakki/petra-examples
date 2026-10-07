@@ -22,8 +22,9 @@ grant {
     permission java.io.FilePermission "${user.dir}/-", "read,write,delete";
     permission java.io.FilePermission "/tmp/-", "read,write,delete";
     
-    // Reflection (Required by petra-verifier, blocked from PRs by AST Gate)
+    // Reflection & Compilation (Required by petra-verifier, blocked from PRs by AST Gate)
     permission java.lang.RuntimePermission "accessDeclaredMembers";
     permission java.lang.RuntimePermission "getClassLoader";
     permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+    permission java.lang.RuntimePermission "accessSystemModules";
 };
