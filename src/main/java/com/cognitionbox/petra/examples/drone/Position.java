@@ -1,4 +1,4 @@
-package com.cognitionbox.petra.examples.droneroutesystem;
+package com.cognitionbox.petra.examples.drone;
 
 import com.cognitionbox.petra.ast.terms.Base;
 
