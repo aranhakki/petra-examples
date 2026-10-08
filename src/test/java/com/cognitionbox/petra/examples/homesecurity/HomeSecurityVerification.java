@@ -15,6 +15,6 @@ public class HomeSecurityVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verify(Building.class);
+        return verifyJava(Building.class);
     }
 }

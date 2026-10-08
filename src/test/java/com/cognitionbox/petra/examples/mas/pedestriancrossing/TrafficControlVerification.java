@@ -15,6 +15,6 @@ public class TrafficControlVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verify(TrafficControlMAS.class);
+        return verifyJava(TrafficControlMAS.class);
     }
 }

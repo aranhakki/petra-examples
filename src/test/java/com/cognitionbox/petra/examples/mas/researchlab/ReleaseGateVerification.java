@@ -15,6 +15,6 @@ public class ReleaseGateVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verify(ReleaseGateMAS.class);
+        return verifyJava(ReleaseGateMAS.class);
     }
 }

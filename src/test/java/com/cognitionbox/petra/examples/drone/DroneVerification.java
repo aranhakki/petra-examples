@@ -16,6 +16,6 @@ public class DroneVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verify(Controller.class);
+        return verifyJava(Controller.class);
     }
 }

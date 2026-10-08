@@ -15,6 +15,6 @@ public class TradingVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verify(TrendMeanRevStrategy.class);
+        return verifyJava(TrendMeanRevStrategy.class);
     }
 }
