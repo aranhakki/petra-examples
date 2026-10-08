@@ -61,7 +61,7 @@ In order to successfully compile the project you will need to remove the followi
 <dependency>
    <groupId>com.cognitionbox.petra</groupId>
    <artifactId>petra-verifier</artifactId>
-   <version>0.0.9-SNAPSHOT</version>
+   <version>0.1.0-SNAPSHOT</version>
  </dependency>
 ```
 
