@@ -15,7 +15,7 @@ public class LightVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verify(Light.class);
+        return verify(Light.class,true);
     }
 
 }
