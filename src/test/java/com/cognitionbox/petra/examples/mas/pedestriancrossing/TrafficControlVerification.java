@@ -15,6 +15,6 @@ public class TrafficControlVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verifyJava(TrafficControlMAS.class);
+        return verifyJava("com/cognitionbox/petra/examples/mas/pedestriancrossing/", "TrafficControlMAS");
     }
 }
