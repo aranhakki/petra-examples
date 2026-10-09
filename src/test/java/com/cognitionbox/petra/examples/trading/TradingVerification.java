@@ -15,6 +15,6 @@ public class TradingVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verifyJava("com/cognitionbox/petra/examples/tradingsystem/", "TrendMeanRevStrategy");
+        return verifyJava("com/cognitionbox/petra/examples/trading/", "TrendMeanRevStrategy");
     }
 }
