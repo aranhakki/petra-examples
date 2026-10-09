@@ -46,8 +46,7 @@
             <updatePolicy>always</updatePolicy>
         </releases>
         <snapshots>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
+            <enabled>false</enabled>
         </snapshots>
     </repository>
 </distributionManagement>
