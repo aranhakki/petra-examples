@@ -1,22 +1,26 @@
-// 1. Whitelist the entire locked-down Maven cache for the framework
-// (This grants AllPermission to the trusted Petra framework code)
+// 1. Whitelist the Maven Cache (Trusted Dependencies)
 grant codeBase "file:${maven.repo.local}/-" {
     permission java.security.AllPermission;
 };
 
-// 2. The PR Sandbox (Restricted to safe baselines)
+// 2. Whitelist the Tamper-Proof Framework Zone
+grant codeBase "file:${user.dir}/target/classes/com/cognitionbox/petra/ast/-" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:${user.dir}/target/test-classes/com/cognitionbox/petra/ast/-" {
+    permission java.security.AllPermission;
+};
+
+// 3. Whitelist the Dynamic Execution Engine
+grant codeBase "file:${java.io.tmpdir}/-" {
+    permission java.security.AllPermission;
+};
+// Fallback for Linux hardcoded internal JDK compiler paths
+grant codeBase "file:/tmp/-" {
+    permission java.security.AllPermission;
+};
+
+// 4. The PR Sandbox (Zero File Access, Zero Network Access)
 grant {
-    // Required by the JDK's internal NIO and Compiler classes
     permission java.util.PropertyPermission "*", "read";
-    
-    // Required for the dynamic compiler to resolve system classes
-    permission java.io.FilePermission "${java.home}/-", "read";
-    
-    // Required for the dynamic compiler to write intermediate .class files
-    permission java.io.FilePermission "${java.io.tmpdir}/-", "read,write,delete";
-    permission java.io.FilePermission "/tmp/-", "read,write,delete";
-    
-    // NEW: Required for the dynamic compiler to scan the classpath
-    // (Safe because GOLDEN_POM prevents malicious dependency injection)
-    permission java.io.FilePermission "${maven.repo.local}/-", "read";
 };
