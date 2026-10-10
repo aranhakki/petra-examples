@@ -25,11 +25,6 @@
                  <includes>
                      <include>**/*Verification.java</include>
                  </includes>
-                 <argLine>
-                     -Djava.security.manager
-                     -Djava.security.policy=${project.basedir}/.github/sandbox.policy
-                     -Dmaven.repo.local=${settings.localRepository}
-                 </argLine>
                   <useManifestOnlyJar>false</useManifestOnlyJar>
              </configuration>
          </plugin>
@@ -55,7 +50,7 @@
     <dependency>
        <groupId>com.cognitionbox.petra</groupId>
        <artifactId>petra-verifier</artifactId>
-       <version>0.1.3</version>
+       <version>0.1.4</version>
      </dependency>
      <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
