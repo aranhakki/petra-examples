@@ -1,17 +1,38 @@
-// GLOBAL CI SANDBOX
-// Grants the minimum permissions required for the JDK Compiler to function in memory.
+// 1. Whitelist the Maven Cache (JUnit, Surefire Dependencies, Petra Framework)
+// Includes triple-slash fallbacks for Linux CI symlink resolution
+grant codeBase "file:${maven.repo.local}/-" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:///${maven.repo.local}/-" {
+    permission java.security.AllPermission;
+};
+
+// 2. Whitelist Surefire Booter (The test orchestrator)
+grant codeBase "file:${user.dir}/target/surefire/-" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:///${user.dir}/target/surefire/-" {
+    permission java.security.AllPermission;
+};
+
+// 3. Dynamic Execution Engine (/tmp/)
+grant codeBase "file:${java.io.tmpdir}/-" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:/tmp/-" {
+    permission java.security.AllPermission;
+};
+
+// 4. The PR Sandbox (Baseline for the JDK Compiler & Untrusted Code)
 grant {
-    // 1. Basic JVM Boot Properties
     permission java.util.PropertyPermission "*", "read";
     
-    // 2. Allow compiler to read JDK standard libraries
+    // Compiler needs to read JDK and Classpath
     permission java.io.FilePermission "${java.home}/-", "read";
-    
-    // 3. Allow compiler to write intermediate dynamically generated classes
-    permission java.io.FilePermission "${java.io.tmpdir}/-", "read,write,delete";
-    permission java.io.FilePermission "/tmp/-", "read,write,delete";
-    
-    // 4. Allow compiler to scan the classpath for symbol resolution
     permission java.io.FilePermission "${maven.repo.local}/-", "read";
     permission java.io.FilePermission "${user.dir}/target/-", "read";
+    
+    // Compiler needs to write intermediate files
+    permission java.io.FilePermission "${java.io.tmpdir}/-", "read,write,delete";
+    permission java.io.FilePermission "/tmp/-", "read,write,delete";
 };
