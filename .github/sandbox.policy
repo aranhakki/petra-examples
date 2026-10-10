@@ -1,4 +1,5 @@
-// 1. Whitelist the entire locked-down Maven cache
+// 1. Whitelist the entire locked-down Maven cache for the framework
+// (This grants AllPermission to the trusted Petra framework code)
 grant codeBase "file:${maven.repo.local}/-" {
     permission java.security.AllPermission;
 };
@@ -11,7 +12,11 @@ grant {
     // Required for the dynamic compiler to resolve system classes
     permission java.io.FilePermission "${java.home}/-", "read";
     
-    // Required for the dynamic compiler to write and read intermediate .class files
+    // Required for the dynamic compiler to write intermediate .class files
     permission java.io.FilePermission "${java.io.tmpdir}/-", "read,write,delete";
     permission java.io.FilePermission "/tmp/-", "read,write,delete";
+    
+    // NEW: Required for the dynamic compiler to scan the classpath
+    // (Safe because GOLDEN_POM prevents malicious dependency injection)
+    permission java.io.FilePermission "${maven.repo.local}/-", "read";
 };
