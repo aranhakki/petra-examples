@@ -3,8 +3,15 @@ grant codeBase "file:${maven.repo.local}/-" {
     permission java.security.AllPermission;
 };
 
-// 2. The PR Sandbox (Restricted to read-only property baseline)
+// 2. The PR Sandbox (Restricted to safe baselines)
 grant {
     // Required by the JDK's internal NIO and Compiler classes
     permission java.util.PropertyPermission "*", "read";
+    
+    // Required for the dynamic compiler to resolve system classes
+    permission java.io.FilePermission "${java.home}/-", "read";
+    
+    // Required for the dynamic compiler to write and read intermediate .class files
+    permission java.io.FilePermission "${java.io.tmpdir}/-", "read,write,delete";
+    permission java.io.FilePermission "/tmp/-", "read,write,delete";
 };
