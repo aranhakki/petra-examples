@@ -29,6 +29,7 @@ grant {
     
     // Compiler needs to read JDK and Classpath
     permission java.io.FilePermission "${java.home}/-", "read";
+    permission java.io.FilePermission "${maven.repo.local}/-", "read";
     permission java.io.FilePermission "${user.dir}/target/-", "read";
     
     // Compiler needs to write intermediate files
