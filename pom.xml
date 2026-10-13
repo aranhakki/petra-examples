@@ -15,8 +15,8 @@
             <configuration>
                 <source>11</source>
                 <target>11</target>
+                <compilerArgument>-proc:none</compilerArgument>
             </configuration>
-            <compilerArgument>-proc:none</compilerArgument>
         </plugin>
          <plugin>
              <groupId>org.apache.maven.plugins</groupId>
