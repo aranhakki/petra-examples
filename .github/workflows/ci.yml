@@ -13,6 +13,6 @@ jobs:
     uses: petracode-labs/build-engine/.github/workflows/reusable-engine.yml@main
     with:
       # This ensures the build actually tests the FORK'S code
-      ref: ${{ github.event.pull_request.head.sha }}
+      ref: ${{ github.event.pull_request.head.sha || github.sha }}
     secrets:
       PMDT: ${{ secrets.PMDT }}
