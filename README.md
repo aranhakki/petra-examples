@@ -32,6 +32,17 @@ Developing in Petra via this repository follows a unique two-step process:
 ### 2. Local Syntax Validation
 To validate your Petra code locally before pushing, set up and use the **petra-lsp** project in your IDE. This replaces the old Maven-based `petra-ast` dependency workflow, providing instant feedback on Petra Coord and Base constraints directly in your editor as you type.
 
+### 3. Remove Petra Verifier Maven Dependency
+In order to successfully compile the project you will need to remove the following ```petra-verifier``` dependency, either by deleting or commenting out the current verier dependency e.g:
+
+```xml
+<dependency>
+   <groupId>com.cognitionbox.petra</groupId>
+   <artifactId>petra-verifier</artifactId>
+   <version>0.1.7-SNAPSHOT</version>
+ </dependency>
+```
+
 ---
 
 ## 📝 Rules of Engagement
