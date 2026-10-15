@@ -2,6 +2,7 @@ name: Automic Fork CI (Contributor-Only Auto Build)
 on:
   pull_request_target:
     branches: [main]
+  workflow_dispatch: # included for manual run button
 
 jobs:
   call-security-engine:
@@ -12,7 +13,7 @@ jobs:
         actions: read
     uses: petracode-labs/build-engine/.github/workflows/reusable-engine.yml@main
     with:
-      # This ensures the build actually tests the FORK'S code
+      # This ensures the build actually tests the FORK'S code, or falls back to your trusted main branch
       ref: ${{ github.event.pull_request.head.sha || github.sha }}
     secrets:
       PMDT: ${{ secrets.PMDT }}
