@@ -15,6 +15,10 @@ This repository is designed as a sandbox for developers to learn, experiment, an
 Developing in Petra via this repository follows a unique two-step process:
 
 1.  **Local Syntax Validation:** Use the provided Petra AST library to check your code's syntax on your local machine.
+
+    💡 **Coming soon:** Real-time syntax and constraint checking right inside your IDE with the upcoming [petra-lsp](https://github.com/petracode-labs/petra-lsp) project!
+
+
 2.  **Remote Formal Verification:** Raise a Pull Request (PR) to trigger the **Petra Verifier Build Server** on GitHub, which performs a full formal verification analysis.
 
 > **Note for Fork Owners:** GitHub automatically disables workflow files on forks for security. You will see a "Workflows aren’t being run" banner, which is expected behavior and can be safely ignored.
