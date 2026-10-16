@@ -61,24 +61,13 @@ In order to successfully compile the project you will need to remove the followi
 <dependency>
    <groupId>com.cognitionbox.petra</groupId>
    <artifactId>petra-verifier</artifactId>
-   <version>0.1.1-SNAPSHOT</version>
+   <version>0.1.7-SNAPSHOT</version>
  </dependency>
 ```
 
 ### 5. Petra Syntax Checker
 Run the syntax checker by executing the ```PetraVerification``` JUnit tests by right-clicking on the tests and running within the IDE, or by using the following maven command
 ```mvn clean test```.
-
-### 3. Remove Petra Verifier Maven Dependency
-In order to successfully compile the project you will need to remove the following ```petra-verifier``` dependency, either by deleting or commenting out the current verier dependency e.g:
-
-```xml
-<dependency>
-   <groupId>com.cognitionbox.petra</groupId>
-   <artifactId>petra-verifier</artifactId>
-   <version>0.1.7-SNAPSHOT</version>
- </dependency>
-```
 
 ---
 
