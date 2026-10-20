@@ -6,7 +6,9 @@ Welcome to the **petra-examples** repository! This project is a curated collecti
 
 This repository is designed as a sandbox for developers to learn, experiment, and formally verify Petra programs using a hybrid local/remote workflow.
 
-**Official Documentation:** [www.petracode.co.uk](https://www.petracode.co.uk)
+**Architecture Overview:** [https://github.com/petracode-labs](https://github.com/petracode-labs)
+**Official Documentation:** [https://docs.petracode.co.uk/guides/whatispetra/](https://docs.petracode.co.uk/guides/whatispetra/)
+**Commercialization Site:** [www.petracode.co.uk](https://www.petracode.co.uk)
 
 ---
 
