@@ -6,7 +6,11 @@ Welcome to the **petra-examples** repository! This project is a curated collecti
 
 This repository is designed as a sandbox for developers to learn, experiment, and formally verify Petra programs using a hybrid local/remote workflow.
 
-**Official Documentation:** [www.petracode.co.uk](https://www.petracode.co.uk)
+**Architecture Overview:** [https://github.com/petracode-labs](https://github.com/petracode-labs)
+
+**Official Documentation:** [https://docs.petracode.co.uk/guides/whatispetra/](https://docs.petracode.co.uk/guides/whatispetra/)
+
+**Commercialization Site:** [www.petracode.co.uk](https://www.petracode.co.uk)
 
 ---
 
@@ -15,6 +19,10 @@ This repository is designed as a sandbox for developers to learn, experiment, an
 Developing in Petra via this repository follows a unique two-step process:
 
 1.  **Local Syntax Validation:** Use the provided Petra AST library to check your code's syntax on your local machine.
+
+    💡 **Coming soon:** Real-time syntax and constraint checking right inside your IDE with the upcoming [petra-lsp](https://github.com/petracode-labs/petra-lsp) project!
+
+
 2.  **Remote Formal Verification:** Raise a Pull Request (PR) to trigger the **Petra Verifier Build Server** on GitHub, which performs a full formal verification analysis.
 
 > **Note for Fork Owners:** GitHub automatically disables workflow files on forks for security. You will see a "Workflows aren’t being run" banner, which is expected behavior and can be safely ignored.
@@ -61,7 +69,7 @@ In order to successfully compile the project you will need to remove the followi
 <dependency>
    <groupId>com.cognitionbox.petra</groupId>
    <artifactId>petra-verifier</artifactId>
-   <version>0.1.1-SNAPSHOT</version>
+   <version>0.1.7-SNAPSHOT</version>
  </dependency>
 ```
 
