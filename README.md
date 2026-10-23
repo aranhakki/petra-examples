@@ -12,6 +12,8 @@ This repository is designed as a sandbox for developers to learn, experiment, an
 
 **Commercialization Site:** [www.petracode.co.uk](https://www.petracode.co.uk)
 
+**Petra Thesis:** [https://eprints.soton.ac.uk/id/eprint/512032/](https://eprints.soton.ac.uk/id/eprint/512032/)
+
 ---
 
 ## 🚀 The Petra Workflow
