@@ -15,6 +15,6 @@ public class DroneVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verifyJava("com/cognitionbox/petra/examples/drone/", "Controller");
+        return verifyJava("com/cognitionbox/petra/examples/drone/", "Controller", Mode.COORD);
     }
 }
